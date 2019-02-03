@@ -8,9 +8,9 @@ namespace job520;
 class mcrypt
 {
     // cast-128  gost  rijndael-128  twofish  cast-256  loki97  rijndael-192  saferplus  wake  blowfish-compat  des  rijndael-256  serpent  xtea  blowfish  enigma  rc2  tripledes  arcfour
-    private $cipher = 'AES-256-CBC';
+    private $cipher = 'cast-128';
     // cbc  cfb  ctr  ecb  ncfb  nofb  ofb  stream
-    private $mode = 'stram';
+    private $mode = 'cbc';
     // MCRYPT_RAND  MCRYPT_DEV_RANDOM  MCRYPT_DEV_URANDOM
     private $source = MCRYPT_RAND;
     private $key;
