@@ -99,7 +99,7 @@ class rsa
 }
 //$private_key = 'rsa_private_key.pem'; // 私钥路径
 //$public_key = 'rsa_public_key.pem'; // 公钥路径
-//$rsa = new Rsa($private_key, $public_key);
+//$rsa = new rsa($private_key, $public_key);
 //$origin_data = '这是一条测试数据';
 //$encrypt = $rsa->privEncrypt($origin_data);
 //echo '私钥加密后的数据为：' . $encrypt . PHP_EOL;
