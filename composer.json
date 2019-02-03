@@ -1,0 +1,13 @@
+{
+  "name": "job520/aes",
+  "description": "自用对称加密解密类",
+  "authors": [
+    {
+      "name": "lee",
+      "email": "complet@163.com"
+    }
+  ],
+  "autoload":{
+    "psr-4":{"job520\\":"src/"}
+  }
+}
