@@ -1,4 +1,4 @@
-> aes
+> encryption
 >> 自用对称加密类  
 >> 官方文档：[点击进入](http://doc.job520.net/web/#/3?page_id=50)
 
