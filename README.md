@@ -31,28 +31,28 @@ use job520\rsa;
 $key = 'abcdefg';
 // 4. 原始数据
 $data = '你好 world';
-// 5. 实例化mcrypt加密类
+// 5. 实例化 mcrypt 加密类
 $obj = new mcrypt($key);
-// 6. 实例化openssl加密类
+// 6. 实例化 openssl 加密类
 $obj = new openssl($key);
-// 7. aes加密
+// 7. aes 加密
 $encode = $obj->encrypt($data);
 echo $encode . PHP_EOL;
-// 8. aes解密
+// 8. aes 解密
 $decode = $obj->decrypt($encode);
 echo $decode . PHP_EOL;
 // 9. 私钥路径
 $private_key = 'rsa_private_key.pem';
 // 10. 公钥路径
 $public_key = 'rsa_public_key.pem';
-// 11. 实例化rsa加密解密类
+// 11. 实例化 rsa 加密解密类
 $rsa = new rsa($private_key, $public_key);
 // 12. 测试数据
 $origin_data = '这是一条测试数据';
-// 13. rsa私钥加密
+// 13. rsa 私钥加密
 $encrypt = $rsa->privEncrypt($origin_data);
 echo '私钥加密后的数据为：' . $encrypt . PHP_EOL;
-// 14. rsa公钥解密
+// 14. rsa 公钥解密
 $decrypt = $rsa->publicDecrypt($encrypt);
 echo '公钥解密后的数据为: ' . $decrypt . PHP_EOL;
 ```
