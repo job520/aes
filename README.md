@@ -49,17 +49,17 @@ $public_key = 'rsa_public_key.pem';
 $rsa = new rsa($private_key, $public_key);
 // 12. 测试数据
 $origin_data = '这是一条测试数据';
-// 13. rsa 私钥加密
-$encrypt = $rsa->privEncrypt($origin_data);
-echo '私钥加密后的数据为：' . $encrypt . PHP_EOL;
-// 14. rsa 公钥解密
-$decrypt = $rsa->publicDecrypt($encrypt);
-echo '公钥解密后的数据为: ' . $decrypt . PHP_EOL;
+// 13. rsa 公钥加密
+$encrypt = $rsa->publicEncrypt($origin_data);
+echo '公钥加密后的数据为：' . $encrypt . PHP_EOL;
+// 14. rsa 私钥解密
+$decrypt = $rsa->privDecrypt($encrypt);
+echo '私钥解密后的数据为: ' . $decrypt . PHP_EOL;
 ```
 3. 输出：
 ```
-bi9OanYvOU5NV1Q0REtGU1RvUTduZz09OjrBhwdu3owVn02EkKK6KCU7
+eUVVWkZraUw3STNmajhLKzVjdWFvUT09OjrkovuKfPHwPnqVEtm4os+U
 你好 world
-私钥加密后的数据为：TM6JDriSABTS3otd80JGzLSEzQpnL8LhvoWxJXwN1gSdCRy6lrUvI/vd80rrRRtW8qsmq5HLUpfU+J0jeyJqYIu7hpzVem9XPqOGS2LdsxuIyARCj37xZ2a9np/xhl/HIKCj9DlVOjpMbKJXPPvrblxz+4P5vHWPIzwTNGa9pPs=
-公钥解密后的数据为: 这是一条测试数据
+公钥加密后的数据为：soOTP7h5C8zzx+3YcuhMYkQ5NXNrBxt3s5/drwf/66CfVspyTvNBXmF0TezdsNKZPlztLhDHGICOUAHttl1ePoOIuymY9t2Jcd1oJitjI99WKfvkR7gwBEKLZrk5xD4LHVBknP+X8ww4CaLgSOz/gdiwJ5nt2VJ58GoKUc2ba8s=
+私钥解密后的数据为: 这是一条测试数据
 ```
